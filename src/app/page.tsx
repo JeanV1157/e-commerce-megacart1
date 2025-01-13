@@ -1,12 +1,11 @@
 import Menu from "../app/assets/svg/menu.svg";
-import Carousel from "../custom-components/carousel/Carousel-productos";
+import CarouselProducts from "../custom-components/carousel/Carousel-productos";
+import CarouselOffers from "@/custom-components/carousel/Carousel-oferta";
 import MagnificantGlasses from "../app/assets/svg/magnificant-glasses.svg";
 import { PiHeartBold } from "react-icons/pi";
 import { BsCart4 } from "react-icons/bs";
 import HelloLogo from "./assets/svg/helloLogo.svg";
 import { IoBagHandleSharp } from "react-icons/io5";
-import ArrowRight from "./assets/svg/arrowRight.svg";
-import ArrowLeft from "./assets/svg/arrowLeft.svg";
 import Kitchen from "./assets/svg/kitchen.svg";
 import Accessories from "./assets/svg/accessories.svg";
 import { TbHanger } from "react-icons/tb";
@@ -29,8 +28,6 @@ import ShoesBlack from "./assets/images/shoesBlack.png";
 import ShoesBlack2 from "./assets/images/shoesBlack2.png";
 import GoodWeek from "./assets/images/goodWeek.jpg";
 import { Button } from "@/components/ui/button";
-import CarouselProducts from "../custom-components/carousel/Carousel-productos";
-import CarouselOffers from "@/custom-components/carousel/Carousel-oferta";
 
 export default function Home() {
   const mainBanner = [
