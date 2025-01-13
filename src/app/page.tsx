@@ -20,7 +20,7 @@ import Glasses from "./assets/images/glasses.jpg";
 import Wallets from "./assets/images/wallets.png";
 import Sunglasses from "./assets/images/sunglasses.png";
 import HandWatch from "./assets/images/handWatch.png";
-import Jeans from "./assets/images/JEANS.png";
+import Jeans from "./assets/images/jeans.png";
 import Blouse from "./assets/images/blouse.png";
 import OnePiece from "./assets/images/onePiece.png";
 import BootsBrown from "./assets/images/bootsBrown.png";
