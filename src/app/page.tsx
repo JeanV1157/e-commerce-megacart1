@@ -102,16 +102,16 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-between ">
-            <Button className="flex">
+          <div className="flex items-center justify-around ">
+            <Button className="flex space-x-2">
               <HelloLogo />
               <span className="font-actor text-[#003C60] text-[14px] font-bold">
                 Hola, Inicia sesion
               </span>
             </Button>
           </div>
-          <div className="flex items-center justify-between">
-            <Button className="flex">
+          <div className="flex items-center justify-around ">
+            <Button className="flex space-x-2">
               <IoBagHandleSharp className=" fill-[#003C60] w-[20px] h-[20px]" />
               <span className="font-actor text-[#003C60] text-[14px] font-bold">
                 Mis compras
@@ -132,18 +132,6 @@ export default function Home() {
       </div>
       <div className="flex w-full items-center justify-center overflow-hidden h-[580px]">
         <CarouselOffers items={mainBanner} />
-        {/* <Image
-          src={GoodWeek}
-          alt="Buen Fin"
-          className="w-full h-auto"
-          height={510}
-        />
-        <Button className="absolute right-0">
-          <ArrowRight className=" bg-[#171A1FFF] opacity-60 stroke-white w-[65px] h-[65px]" />
-        </Button>
-        <Button className="absolute left-0">
-          <ArrowLeft className="bg-[#171A1FFF] opacity-60 stroke-white w-[65px] h-[65px]" />
-        </Button> */}
       </div>
       <div className="flex h-[67px] items-center justify-center">
         <div className="flex h-[34px] w-[825px] items-center justify-between text-[14px]">
@@ -191,58 +179,74 @@ export default function Home() {
         <CarouselProducts items={footwear} title="Calzados" />
       </div>
 
-      <div className=" bg-[#F3F4F6FF] h-[276px] ">
-        <div className=" ">
+      <div className=" bg-[#F3F4F6FF] h-[276px] px-[30px] ">
+        <div className="my-8">
           <Image src={Logo} alt="MegaCart Logo" height={48} />
         </div>
-        <div className="flex items-center justify-around font-actor text-[#323842FF] my-2 ">
+        <div className="flex items-start justify-around font-actor my-2 ">
           <div className="flex flex-col justify-center items-start space-y-2">
-            <span className="text-[20px] font-semibold">Te ayudamos</span>
-            <span className="text-[14px] ">Libro de reclamaciones</span>
-            <span className="text-[14px]">Atencion por WhatsApp</span>
-            <span className="text-[14px]">Seguimiento a mi orden</span>
-            <span className="text-[14px] ">
-              Politica de prevecion de delitos
+            <span className="text-[20px] text-[#323842FF] font-semibold">
+              Te ayudamos
             </span>
+            {[
+              "Libro de reclamaciones",
+              "Atencion por WhatsApp",
+              "Seguimiento a mi orden",
+              "Politica de prevecion de delitos",
+            ].map((item, index) => (
+              <Button key={index}>
+                <span className="text-[14px] text-[#323842FF] font-actor">
+                  {item}
+                </span>
+              </Button>
+            ))}
+          </div>
+          <div className="flex flex-col justify-center items-start space-y-2  font-actor">
+            <span className="text-[20px] text-[#323842FF] font-semibold">
+              Mi pedido
+            </span>
+            {[
+              "Cambios y devoluciones",
+              "Seguimiento a mi orden",
+              "Inversionistas",
+            ].map((item, index) => (
+              <Button key={index}>
+                <span className="text-[14px] text-[#323842FF]">{item}</span>
+              </Button>
+            ))}
           </div>
           <div className="flex flex-col justify-center items-start space-y-2">
-            <span className="text-[20px] font-semibold">Mi pedido</span>
-            <span className="text-[14px] ">Cambios y devoluciones</span>
-            <span className="text-[14px] ">Seguimiento a mi orden</span>
-            <span className="text-[14px] ">Inversionistas</span>
-          </div>
-          <div className="flex flex-col justify-center items-start space-y-2 ">
             <span className="text-[20px] font-semibold">Empresa</span>
-            <Button>
-              <span className="text-[14px] text-[#323842FF]">
-                Politica de privacidad
-              </span>
-            </Button>
-            <Button>
-              <span className="text-[14px] text-[#323842FF]">Ubicaciòn</span>
-            </Button>
-            <Button>
-              <span className="text-[14px] text-[#323842FF]">
-                Terminos y condiciones
-              </span>
-            </Button>
-            <Button>
-              <span className="text-[14px] text-[#323842FF]">
-                Libro de reclamaciones
-              </span>
-            </Button>
+            {[
+              "Política de privacidad",
+              "Ubicación",
+              "Términos y condiciones",
+              "Libro de reclamaciones",
+            ].map((item, index) => (
+              <Button key={index}>
+                <span className="text-[14px] text-[#323842FF]">{item}</span>
+              </Button>
+            ))}
           </div>
         </div>
       </div>
       <div className="flex flex-col items-center justify-around h-[164px] bg-[#003C60FF] ">
         <div className="flex items-center h-[82px] space-x-10 text-white font-actor font-semibold ">
-          <span>Terminos y condiciones</span>
-          <span>Politica de cookies</span>
-          <span>Politica de privacidad</span>
+          {[
+            "Terminos y condiciones",
+            "Politica de cookies",
+            "Politica de privacidad",
+          ].map((item, index) => (
+            <Button key={index}>
+              <span>{item}</span>
+            </Button>
+          ))}
         </div>
-        <div className="flex items-center w-full h-[82px] border-t-2 border-t-white">
+        <div className="flex flex-col px-16 justify-center w-full h-[82px] border-t-2 border-t-white font-actor text-white">
           <span>Todos los derechos reservados</span>
-          <span>Malecon Centenario Leoncio Prado</span>
+          <span>
+            Megacart.com Malecón Centenario Leoncio Prado 1111, Huánuo, Perú
+          </span>
         </div>
       </div>
     </div>
