@@ -183,13 +183,83 @@ export default function Home() {
         </Button>
       </div>
 
-      <div className="mb-[55px]">
-        <Carousel items={kitchen} title="Cocina" />
-        <Carousel items={accesories} title="Accesorios" />
-        <Carousel items={clothes} title="Ropa" />
-        <Carousel items={footwear} title="Calzados" />
-      </div>
+      <Carousel items={kitchen} title="Cocina" />
+      <Carousel items={accesories} title="Accesorios" />
+      <Carousel items={clothes} title="Ropa" />
+      <Carousel items={footwear} title="Calzados" />
 
+      {/* <div className="flex items-center justify-center">
+        <span className="font-actor font-bold text-[#171A1FFF] text-[32px]">
+          Accesorios
+        </span>
+      </div>
+      <div className="flex items-center justify-around">
+        {accesories.map((image, index) => (
+          <button key={index}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              className="rounded-lg object-cover"
+              width={200}
+              height={200}
+            />
+          </button>
+        ))}
+        <Button className="absolute right-0">
+          <ArrowRight className="  stroke-black w-[65px] h-[65px]" />
+        </Button>
+        <Button className="absolute left-0">
+          <ArrowLeft className="bg-none stroke-black w-[65px] h-[65px]" />
+        </Button>
+      </div>
+      <div className="flex items-center justify-center">
+        <span className="font-actor font-bold text-[#171A1FFF] text-[32px]">
+          Ropa
+        </span>
+      </div>
+      <div className="flex items-center justify-around">
+        {clothes.map((image, index) => (
+          <button key={index}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              className="rounded-lg object-cover"
+              width={200}
+              height={200}
+            />
+          </button>
+        ))}
+        <Button className="absolute right-0">
+          <ArrowRight className="  stroke-black w-[65px] h-[65px]" />
+        </Button>
+        <Button className="absolute left-0">
+          <ArrowLeft className="bg-none stroke-black w-[65px] h-[65px]" />
+        </Button>
+      </div>
+      <div className="flex items-center justify-center">
+        <span className="font-actor font-bold text-[#171A1FFF] text-[32px]">
+          Calzados
+        </span>
+      </div>
+      <div className="flex items-center justify-around">
+        {footwear.map((image, index) => (
+          <button key={index}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              className="rounded-lg object-cover"
+              width={200}
+              height={200}
+            />
+          </button>
+        ))}
+        <Button className="absolute right-0">
+          <ArrowRight className="  stroke-black w-[65px] h-[65px]" />
+        </Button>
+        <Button className="absolute left-0">
+          <ArrowLeft className="bg-none stroke-black w-[65px] h-[65px]" />
+        </Button>
+      </div> */}
       <div className=" bg-[#F3F4F6FF] h-[276px] ">
         <div className=" ">
           <Image src={Logo} alt="MegaCart Logo" width={210} height={48} />
@@ -231,17 +301,6 @@ export default function Home() {
               </span>
             </Button>
           </div>
-        </div>
-      </div>
-      <div className="flex flex-col items-center justify-around h-[164px] bg-[#003C60FF] ">
-        <div className="flex items-center h-[82px] space-x-10 text-white font-actor font-semibold ">
-          <span>Terminos y condiciones</span>
-          <span>Politica de cookies</span>
-          <span>Politica de privacidad</span>
-        </div>
-        <div className="flex items-center w-full h-[82px] border-t-2 border-t-white">
-          <span>Todos los derechos reservados</span>
-          <span>Malecon Centenario Leoncio Prado</span>
         </div>
       </div>
     </div>
