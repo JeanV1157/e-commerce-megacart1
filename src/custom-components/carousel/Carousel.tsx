@@ -1,11 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import ArrowLeft from "../../app/assets/svg/arrowLeft.svg";
 import ArrowRight from "../../app/assets/svg/arrowRight.svg";
-
-export default function Carousel({ items, title }) {
+type Props = {
+  items: {
+    src: StaticImageData;
+    alt: string;
+  }[];
+  title: string;
+};
+export default function Carousel({ items, title }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 3; // Número de elementos visibles por página
 
