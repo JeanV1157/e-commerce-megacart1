@@ -1,5 +1,5 @@
 import Menu from "../app/assets/svg/menu.svg";
-import Carousel from "../custom-components/carousel/Carousel";
+import Carousel from "../custom-components/carousel/Carousel-productos";
 import MagnificantGlasses from "../app/assets/svg/magnificant-glasses.svg";
 import { PiHeartBold } from "react-icons/pi";
 import { BsCart4 } from "react-icons/bs";
@@ -13,6 +13,7 @@ import { TbHanger } from "react-icons/tb";
 import { PiHighHeel } from "react-icons/pi";
 import Image from "next/image";
 import Logo from "../app/assets/images/logo.png";
+import SpecialSale from "../app/assets/images/specialSale.jpg";
 import WeeklyOffers from "./assets/images/weeklyOffers.jpg";
 import Covered from "./assets/images/covered.png";
 import FryingPan from "./assets/images/fryingPan.png";
@@ -28,8 +29,15 @@ import ShoesBlack from "./assets/images/shoesBlack.png";
 import ShoesBlack2 from "./assets/images/shoesBlack2.png";
 import GoodWeek from "./assets/images/goodWeek.jpg";
 import { Button } from "@/components/ui/button";
+import CarouselProducts from "../custom-components/carousel/Carousel-productos";
+import CarouselOffers from "@/custom-components/carousel/Carousel-oferta";
 
 export default function Home() {
+  const mainBanner = [
+    { src: SpecialSale, alt: "Baner Principal" },
+    { src: GoodWeek, alt: "Buen fin de semana" },
+  ];
+
   const kitchen = [
     { src: Covered, alt: "Cubiertos" },
     { src: Covered, alt: "Cubiertos" },
@@ -75,7 +83,7 @@ export default function Home() {
       </div>
       <div className="flex justify-between h-[66px] bg-[#F8F9FAFF] border-b-[1px] border-[#b3b5ba] px-[30px] hover:border-b-[#0f3684]">
         <div className="flex items-center">
-          <Image src={Logo} alt="MegaCart Logo" width={209} height={48} />
+          <Image src={Logo} alt="MegaCart Logo" height={48} />
         </div>
         <div className="flex items-center justify-between ">
           <Button className="flex text-[#003C60] hover:bg-transparent text-[14px] font-bold">
@@ -125,8 +133,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex w-full items-center justify-center my-9">
-        <Image
+      <div className="flex w-full items-center justify-center overflow-hidden h-[580px]">
+        <CarouselOffers items={mainBanner} />
+        {/* <Image
           src={GoodWeek}
           alt="Buen Fin"
           className="w-full h-auto"
@@ -137,7 +146,7 @@ export default function Home() {
         </Button>
         <Button className="absolute left-0">
           <ArrowLeft className="bg-[#171A1FFF] opacity-60 stroke-white w-[65px] h-[65px]" />
-        </Button>
+        </Button> */}
       </div>
       <div className="flex h-[67px] items-center justify-center">
         <div className="flex h-[34px] w-[825px] items-center justify-between text-[14px]">
@@ -174,25 +183,20 @@ export default function Home() {
       </div>
       <div className="flex items-center justify-center">
         <Button>
-          <Image
-            src={WeeklyOffers}
-            alt="Ofertas Semanales"
-            width={1100}
-            height={379}
-          />
+          <Image src={WeeklyOffers} alt="Ofertas Semanales" width={1100} />
         </Button>
       </div>
 
       <div className="mb-[55px]">
-        <Carousel items={kitchen} title="Cocina" />
-        <Carousel items={accesories} title="Accesorios" />
-        <Carousel items={clothes} title="Ropa" />
-        <Carousel items={footwear} title="Calzados" />
+        <CarouselProducts items={kitchen} title="Cocina" />
+        <CarouselProducts items={accesories} title="Accesorios" />
+        <CarouselProducts items={clothes} title="Ropa" />
+        <CarouselProducts items={footwear} title="Calzados" />
       </div>
 
       <div className=" bg-[#F3F4F6FF] h-[276px] ">
         <div className=" ">
-          <Image src={Logo} alt="MegaCart Logo" width={210} height={48} />
+          <Image src={Logo} alt="MegaCart Logo" height={48} />
         </div>
         <div className="flex items-center justify-around font-actor text-[#323842FF] my-2 ">
           <div className="flex flex-col justify-center items-start space-y-2">
