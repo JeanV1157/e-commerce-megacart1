@@ -85,7 +85,7 @@ export default function Home() {
         <div className="flex items-center justify-between ">
           <Button className="flex text-[#003C60] hover:bg-transparent text-[14px] font-bold">
             <Menu />
-            <span className="font-actor text-[#003C60]">Menú</span>
+            <span className="font-actor">Menú</span>
           </Button>
         </div>
         <div className="flex items-center justify-between space-x-[35px]">
